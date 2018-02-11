@@ -5,8 +5,12 @@
  * @returns {string}
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (x) => {
+  let str = '';
+  for(i = 0; i < x; i++){
+    str = str + 'hello';
+  }
+  return str;
 };
 
 module.exports = {
