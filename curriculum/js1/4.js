@@ -6,8 +6,12 @@
  * @returns {string}
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (n, str) => {
+  let rtnStr = '';
+  for(i = 0; i < n; i++) {
+    rtnStr += str;
+  }
+  return rtnStr;
 };
 
 module.exports = {
