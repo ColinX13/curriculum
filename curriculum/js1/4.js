@@ -6,12 +6,11 @@
  * @returns {string}
  */
 
-const solution = (n, str) => {
-  let rtnStr = '';
-  for(i = 0; i < n; i++) {
-    rtnStr += str;
+const solution = (n, str, result = '') => {
+  if(n === 0) {
+    return result;
   }
-  return rtnStr;
+  return solution(n - 1, str, result + str);
 };
 
 module.exports = {
