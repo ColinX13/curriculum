@@ -5,8 +5,19 @@
  * @returns {boolean}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (a, b = a, sum = 0) => {
+  if(a <= 0) {
+    if(sum === b + 1) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  if(b % a === 0) {
+    sum += a;
+  }
+  return solution(a - 1, b, sum);
 };
 
 module.exports = {
