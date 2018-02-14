@@ -6,18 +6,23 @@
  */
 
 const solution = (a, b = a, sum = 0) => {
-  if(a <= 0) {
-    if(sum === b + 1) {
-      return true;
+  if(b > 0){
+    if(a <= 0) {
+      if(sum === b + 1) {
+        return true;
+      }
+      else {
+        return false;
+      }
     }
-    else {
-      return false;
+    if(b % a === 0) {
+      sum += a;
     }
+    return solution(a - 1, b, sum);
   }
-  if(b % a === 0) {
-    sum += a;
+  else {
+    return false;
   }
-  return solution(a - 1, b, sum);
 };
 
 module.exports = {
