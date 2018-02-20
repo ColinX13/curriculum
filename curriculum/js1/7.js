@@ -5,24 +5,11 @@
  * @returns {boolean}
  */
 
-const solution = (a, b = a, sum = 0) => {
-  if(b > 0){
-    if(a <= 0) {
-      if(sum === b + 1) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
-    if(b % a === 0) {
-      sum += a;
-    }
-    return solution(a - 1, b, sum);
-  }
-  else {
-    return false;
-  }
+const solution = (a, b = 2) => {
+  if(a == b) return true;
+  if(a % b == 0) return false;
+  if(a < b) return false;
+  return solution(a, b + 1);
 };
 
 module.exports = {
